@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Sofadi+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -162,11 +164,17 @@ section {
 }
 
 .navbar-logo {
+    font-family: 'Bodoni Moda', Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--dark);
     text-decoration: none;
     transition: var(--transition);
+}
+
+.navbar-logo>span {
+    font-family: 'Bodoni Moda', Arial, sans-serif;
+
 }
 
 .navbar-logo:hover {
@@ -177,11 +185,19 @@ section {
     color: var(--primary);
 }
 
+/* -+- NAVBAR MENU -+- */
+
 .navbar-menu {
     display: flex;
     list-style: none;
     gap: 30px;
     align-items: center;
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .navbar-menu li a {
@@ -207,6 +223,26 @@ section {
     width: 100%;
 }
 
+/* -+- TOMBOL LOGIN -+- */
+
+.navbar-menu .login {
+    background-color: var(--primary);
+    border-radius: var(--border-radius);
+    padding: 5px 20px;
+    transition: var(--transition);
+}
+
+.navbar-menu .login a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.login:hover {
+    transform: scale(1.09);
+}
+
+/* -+- NAVBAR TOGGLE/HAMBURGER -+- */
+
 .navbar-toggle {
     display: none;
     background: transparent;
@@ -223,7 +259,7 @@ section {
     height: 3px;
     width: 100%;
     background: var(--dark);
-    border-radius: 10px;
+    border-radius: 40px;
     transition: var(--transition);
 }
 
@@ -279,30 +315,6 @@ section {
     display: flex;
     gap: 15px;
     margin-bottom: 40px;
-}
-
-.hero-features {
-    display: flex;
-    gap: 30px;
-    cursor: default;
-}
-
-.feature {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    justify-content: center;
-}
-
-.feature i {
-    color: var(--secondary);
-    font-size: 1.2rem;
 }
 
 .hero-image {
@@ -991,6 +1003,10 @@ section {
         z-index: 999;
     }
 
+    .navbar-menu ul {
+        flex-direction: column;
+    }
+
     .navbar-toggle {
         display: flex;
         z-index: 1000;
@@ -1001,7 +1017,7 @@ section {
     }
 
     .navbar-toggle.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
     }
     
     .navbar-toggle.active .bar:nth-child(2) {
@@ -1009,7 +1025,7 @@ section {
     }
     
     .navbar-toggle.active .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 
     .hero-container {
@@ -1083,7 +1099,7 @@ section {
     }
     
     .navbar-toggle.active .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(4px, -4px);
     }
     
     .hero-title {

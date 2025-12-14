@@ -275,7 +275,10 @@ class App {
             observer.observe(el);
         });
     }
+    
 }
+
+
 
 // Initialize the application when DOM is loaded
 
