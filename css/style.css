@@ -1217,3 +1217,53 @@ section {
         width: 250px;
     }
 }
+
+/* LOGIN & SIGN UP STYLE */
+
+/* ==========================================
+   AUTH PAGES STYLES (Login & Signup)
+   ========================================== */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+}
+
+.auth-container {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 50px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.auth-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--dark);
+    text-align: center;
+}
+
+.auth-subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Responsive auth pages */
+@media (max-width: 576px) {
+    .auth-container {
+        padding: 30px 20px;
+    }
+    
+    .auth-title {
+        font-size: 1.6rem;
+    }
+}
