@@ -236,7 +236,7 @@ class App {
 
         if (backToTopButton) {
             window.addEventListener("scroll", () => {
-                if (window.pageYOffset > 300) {
+                if (window.pageYOffset > 8700) {
                     backToTopButton.classList.add("visible");
                 } else {
                     backToTopButton.classList.remove("visible");

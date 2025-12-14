@@ -1,0 +1,100 @@
+/* Floating Checkout Button */
+.floating-checkout-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background: linear-gradient(135deg, #0190FF 0%, #0056b3 100%);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(1, 144, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+}
+
+.floating-checkout-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.floating-checkout-btn:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #0190FF 100%);
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(1, 144, 255, 0.6);
+}
+
+.floating-checkout-btn:active {
+    transform: scale(0.95);
+}
+
+.floating-checkout-btn i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.floating-checkout-btn:hover i {
+    transform: rotate(15deg);
+}
+
+.floating-checkout-btn span {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Pulse Animation */
+.floating-checkout-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 2px solid #0190FF;
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .floating-checkout-btn {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .floating-checkout-btn i {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+    
+    .floating-checkout-btn span {
+        font-size: 9px;
+    }
+}
