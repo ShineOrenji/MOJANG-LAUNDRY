@@ -508,7 +508,7 @@ section {
 /* -+- LAYANAN SECTION -+- */
 
 .menu {
-    background: #9c9c9c;
+    background: var(--primary);
 }
 
 .menu-categories {
@@ -585,8 +585,8 @@ section {
 }
 
 .item-badge.popular {
-    background: var(--primary);
-    color: var(--light);
+    background: var(--secondary);
+    color: var(--text);
 }
 
 .item-content {

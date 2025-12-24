@@ -114,7 +114,7 @@ function showEmptyState() {
             <h4>Keranjang Kosong</h4>
             <p>Silakan pilih layanan terlebih dahulu</p>
             <a href="../index.html#layanan" class="btn btn-primary">
-                <i class="fas fa-arrow-left"></i> Pilih Layanan
+                Pilih Layanan
             </a>
         </div>
     `;
@@ -491,7 +491,7 @@ function showSuccessModal(orderData, total) {
             </div>
             
             <div class="modal-actions">
-                <button class="btn btn-secondary" id="printReceipt">
+                <button class="btn btn-secondary" id="printReceipt" style="color: #333;">
                     <i class="fas fa-print"></i> Cetak Nota
                 </button>
                 <button class="btn btn-primary" id="backToHomeModal">
