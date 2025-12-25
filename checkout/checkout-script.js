@@ -501,6 +501,7 @@ function showSuccessModal(orderData, total) {
             </div>
             <h3>Pesanan Berhasil!</h3>
             <p>Terima kasih telah memesan layanan Mojang Laundry. Pesanan Anda sedang diproses.</p>
+            <p style="color: red;">Save nota ini dengan bentuk PDF atau Screenshoot untuk bukti pemesanan, lalu bawa pada saat pengambilan pesanan!</p>
             
             <div class="order-details">
                 <h4>Detail Pesanan:</h4>

@@ -1341,9 +1341,17 @@ section {
     margin-top: 20px;
 }
 
-.size-modal .modal-actions .btn {
+.size-modal .modal-actions .btn-secondary {
     flex: 1;
     padding: 12px 20px;
+    color: var(--dark);
+    border: 2px solid var(--dark);
+    background: var(--light);
+}
+
+.size-modal .modal-actions .btn-secondary:hover {
+    background: var(--dark);
+    color: #fff;
 }
 
 /* Item Note in Checkout */
@@ -1370,7 +1378,7 @@ section {
 }
 
 /* ==========================================
-   PRICE RANGE MODAL STYLES (TAMBAHAN BARU)
+                PRICE RANGE MODAL
    ========================================== */
 
 .price-range-info {
