@@ -9,7 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* WARNA AJA SIH BIAR GAMPANG NNTINYA KAYAK TEMPLATE */
+/* WARNA AJA BIAR GAMPANG */
 
 :root {
     --primary: #1E90FF;
@@ -204,6 +204,33 @@ section {
     text-decoration: none;
     color: var(--dark);
     font-weight: 500;
+    position: relative;
+}
+
+.navbar-menu li a:not(.btn-order)::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar-menu li a:hover:not(.btn-order)::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* BACKUP HOVER KANAN ke KIRI Ler */
+
+/* .navbar-menu li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
     transition: var(--transition);
     position: relative;
 }
@@ -221,7 +248,7 @@ section {
 
 .navbar-menu li a:hover:not(.btn-order)::after {
     width: 100%;
-}
+} */
 
 /* -+- TOMBOL LOGIN -+- */
 
